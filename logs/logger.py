@@ -6,7 +6,7 @@ log_time = datetime.datetime.now().time().strftime("%H%M%S")
 
 log_format = "%(asctime)s - %(message)s"
 
-logging.basicConfig(filename=rf"log_{log_date}_{log_time}.log",
+logging.basicConfig(filename=rf"logs/log_{log_date}.log",
                     level=logging.INFO,
                     datefmt='%d-%m-%y %H:%M:%S',
                     format=log_format,
