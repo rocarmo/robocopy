@@ -4,16 +4,14 @@ from dotenv import load_dotenv
 
 
 def run():
-    load_dotenv()
-
     log.info("Executando robocopy...\n")
 
     source = os.getenv("source_path")
     destiny = os.getenv("destiny_path")
-    mir_option = os.getenv("mir_option")
+    option = os.getenv("option")
 
     try:
-        output = os.popen(f'cmd /c "robocopy {source} {destiny} {mir_option}"').read()
+        output = os.popen(f'cmd /c "robocopy {source} {destiny} {option}"').read()
         log.info(output)
 
         log.info("Robocopy executado com sucesso!")
@@ -25,4 +23,6 @@ def run():
 
 
 if __name__ == "__main__":
+    load_dotenv()
+
     run()
