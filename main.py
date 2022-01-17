@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 
 
 def run():
-    load_dotenv()
-
     log.info("Executando robocopy...\n")
 
     source = os.getenv("source_path")
@@ -25,4 +23,6 @@ def run():
 
 
 if __name__ == "__main__":
+    load_dotenv()
+
     run()
